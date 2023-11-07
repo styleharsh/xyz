@@ -1,1 +1,437 @@
-nnccz
+==================================================================================
+Q1. Design / Create static website include Hyperlink, Formatting, Images, Multimedia, lists.
+==================================================================================
+Code: You can modify the code according to you
+<!DOCTYPE html>
+<html>
+<head>
+<title>Static Website</title>
+<style>
+body {
+font-family: Arial, sans-serif; margin: 20px;
+}
+h1 {
+color: #0077b6;
+}
+p {
+color: #333;
+}
+ul {
+list-style-type: disc;
+}
+ol {
+list-style-type: decimal;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to TE-IT</h1>
+<p>This is a simple example of a static website of TE-IT.</p>
+ 
+<h2>Links</h2>
+<p>Visit these websites:</p>
+<ul>
+<li><a href="https://www.xavier.ac.in">Xavier Institute of Engineering</a></li>
+<li><a href="https://www.google.com">Google</a></li>
+</ul>
+ 
+<h2>Images</h2>
+<p>Here are some images:</p>
+<img src="image1.jpg" alt="Image 1" width="300">
+<img src="image2.jpg" alt="Image 2" width="300">
+ 
+<h2>Multimedia</h2>
+<p>Watch this video:</p>
+<video width="400" controls>
+
+
+<source src="sample.mp4" type="video/mp4"> Your browser does not support the video tag.
+</video>
+ 
+<h2>Lists</h2>
+<p>Here are some lists:</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+</ol>
+</body>
+</html>
+ 
+
+==================================================================================
+Q2. Design / Create webpages including CSS3 Syntax, Background, Fonts, Tables, lists, CSS3 selectors.
+==================================================================================
+Code: CSS is applied for above Html Code
+body {
+font-family: Arial, sans-serif; margin: 20px;
+}
+ 
+body {
+background-color: #f5f5f5;
+}
+ 
+h1 {
+color: #0077b6; font-size: 24px;
+}
+ 
+p {
+color: #333; font-size: 16px;
+}
+ 
+table {
+border-collapse: collapse; width: 80%;
+margin: 20px auto;
+}
+ 
+table, th, td {
+border: 1px solid #333;
+}
+
+
+th, td {
+padding: 10px; text-align: left;
+}
+ 
+ul li:nth-child(odd) { background-color: #f0f0f0;
+}
+ 
+ul li:nth-child(even) { background-color: #e0e0e0;
+}
+ 
+h2 {
+font-size: 20px; color: #009688;
+}
+ 
+==================================================================================
+Q3. Write a program to display CSS border properties & Color properties. Code:
+==================================================================================
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.border-example {
+border: 2px solid #0077b6; padding: 10px;
+margin: 20px; border-radius: 10px;
+}
+ 
+ 
+.color-example {
+background-color: #f0f0f0; /* Background color / color: #333; / Text color */
+}
+</style>
+</head>
+<body>
+<h1>CSS Border and Color Properties</h1>
+
+
+<div class="border-example">
+<h2>Border Example</h2>
+<p>This div has a border with various properties, including width, style, color, padding, margin, and rounded corners.</p>
+</div>
+ 
+ 
+<div class="color-example">
+<h2>Color Example</h2>
+<p>This div has background color and text color set using CSS properties.</p>
+</div>
+</body>
+</html>
+ =================================================================================
+Q4. Write a program in JS to validate Registration Form including email validation.
+==================================================================================
+
+Code:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+var email = document.forms["registrationForm"]["email"].value;
+var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; if (!email.match(emailPattern)) {
+alert("Please enter a valid email address."); return false; // Prevent form submission
+
+
+}
+return true;
+}
+</script>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form name="registrationForm"  onsubmit="return     validateForm()" method="post">
+<label for="email">Email:</label>
+<input type="text" name="email" id="email">
+<br><br>
+<!-- Add more form fields here as needed -->
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+==================================================================================
+Q5. Write a JS program to demonstrate Iterators & Generators. Code:
+==================================================================================
+Iterators:::::
+<script>
+const array = ['a', 'b', 'c']; 
+const it = array[Symbol.iterator](); 
+console.log(it.next());
+console.log(it.next());
+console.log(it.next());
+console.log(it.next());
+</script>
+
+Generators::::
+<script>
+function* numbersGenerator(){
+// yield 1
+// yield 2
+i=1
+while(true){
+yield i++
+}
+}
+const gen=numbersGenerator();
+console.log(gen.next());
+console.log(gen.next());
+</script>
+==================================================================================
+Q6. Write JS program to demonstrate Promise. Code:
+==================================================================================
+
+ let p=new Promise((resolve,reject)=>{ var x=2; if (x==1){ resolve('successfully resolved') }else{ reject('rejected') } }) p.then((message)=>{ // alert(message) console.log(message); }).catch((message)=>{ // alert('rejected') console.log(message) })
+==================================================================================
+Q7. Write a program to demonstrate Inheritance. Code:
+==================================================================================
+
+class A{ constructor(a){ this.Name=a } } class B extends A{ constructor(a,b){ super(a) console.log('I am ',this.Name) this.college=b } } class C extends B{ constructor(a,b){ super(a,b) console.log('I am from ',this.college) } } var obj=new C('saish','XIE')
+
+==================================================================================
+Q8. Write a program to demonstrate Class and Function Component. Code:
+==================================================================================
+import React from 'react';
+// Class Component
+class ClassComponent extends React.Component { render() {
+return (
+<div>
+<h2>This is a Class Component</h2>
+</div>
+);
+}
+}
+// Function Component
+function FunctionComponent() { return (
+<div>
+<h2>This is a Function Component</h2>
+</div>
+);
+}
+// Render both components function App() {
+return (
+<div>
+<ClassComponent />
+<FunctionComponent />
+</div>
+);
+}
+export default App;
+
+==================================================================================
+Q9. Write a program to demonstrate State and Props. Code:
+==================================================================================
+//HOME.js =====
+import React,{useState} from 'react' function Home(props){ const [text,settext]=useState('Enter text here') const handleUpCase = ()=>{ console.log('click on handleUpCase') console.log(text) const newText=text.toUpperCase(); settext(newText) } const handleOnChange=(event)=>{ console.log("change") settext(event.target.value) } return( 
+I am Home a functional component {props.desc}Enter Text: 
+
+UpperCase 
+) } export default Home;
+//app.js===
+import logo from './logo.svg'; import './App.css'; import Home from './component/Home' import Body from './component/Body' function App() { return ( <> 
+); } export default App;
+==================================================================================
+Q10. Write a program to demonstrate Form Handling in Reactjs. Code:
+==================================================================================
+import React,{useState} from 'react' function Home(){ const [text,settext]=useState('Enter text here') const [name,setName]=useState('Enter name') const handleOnChange=(event)=>{ console.log("changetext") settext(event.target.value) } const handleOnChangeName=(event)=>{ console.log('change') setName(event.target.value) } const SubmitClick=(event)=>{ console.log(name) console.log(text) alert('Welcome '+name+' Thanks for your review') } return( 
+Name: <br />
+<input type="text" value={name}
+className="" onChange={handleOnChangeName} id="" />
+<br />
+Review: <br />
+<textarea className=""
+onChange={handleOnChange} id="" cols="30" rows="10"
+value={text}></textarea> <br />
+<button type="submit">Submit</button>
+</form>
+</div>
+)
+}
+export default Home; ==================================================================================
+
+Review: Q11. Write a program to display fibonacii series in REPL 1 1 2 3 5 8 13… Code:
+==================================================================================
+
+function fibo(n){
+if(n==0||n==1){
+return 1
+}
+else{
+return fibo(n-1)+ fibo(n-2)
+}}
+a=fibo(0)
+b=fibo(1) 
+==================================================================================
+Q12. REPL Environment demonstrate variables and multiline expression. 
+
+==================================================================================
+Q13. Demonstrate Nodejs Read Stream &Write Stream. Code:
+==================================================================================
+
+var fs=require('fs')
+readStream= fs.createReadStream('text1.txt');
+writeStream= fs.createWriteStream('text2.txt');
+readStream.pipe(writeStream)
+writeStream.write('hello world')
+
+stream.on("data",(chunks)=>res.write(chunks));
+stream.on("end",()=>res.end()) 
+==================================================================================
+Q14. Demonstrate Nodejs Web Module. Code:
+==================================================================================
+ const http=require('http')
+server=http.createServer((req,res)=>{
+res.end("hello from server")
+}) server.listen(3000,()=>console.log('app is listening')) 
+==================================================================================
+Q15. Demonstrate Express Router. Code:
+==================================================================================
+const express= require('express') const app = express() app.listen(3000,()=>{console.log("app is listening here")}) app.get('/',(req,res)=>{ res.send('This is home page') }) app.get('/about',(req,res)=>{ res.send("This is About page") }) app.get('/contact',(req,res)=>{ res.send("This is contact page") }) app.get('/help',(req,res)=>{ res.send("This is help page") })
+
+==================================================================================
+Q16. Write a program to display class timetable and apply styles on it. Write a program to display even or odd number.
+
+Q17. Write a program to display pattern in REPL
+==================================================================================
+Q18. Write a program to demonstrate Nodejs File system. Code:
+==================================================================================
+ const fs=require('fs')
+
+//readFile
+// fs.readFile('test1.txt','utf-8',(err,data)=>{
+//     if (err) throw err
+//     console.log(data)
+// })
+
+//writeFile
+// fs.writeFile('test1.txt','This is writing',(err)=>{
+//     if (err) throw err
+// })
+
+//append
+// fs.appendFile('test1.txt',"This is appended text",(err)=>{
+//     if (err) throw err
+// })
+
+//rename
+// fs.rename('test1.txt','newtest.txt',(err)=>{
+//     if (err) throw err
+// })
+
+//delete(unlink)
+// fs.unlink('newtest.txt',(err)=>{
+//     if (err) throw err
+// })
+==================================================================================
+Q19. Write a program to display react Router. Code:
+==================================================================================
+
+App.js ======
+import Page11 from "./component/Page11";
+import Page14 from "./component/page14";
+import { BrowserRouter as Router, Routes, Route } from
+"react-router-dom";
+function App() {
+return (
+<>
+<Router>
+<Routes>
+<Route path="/" element={<Page11/>}></Route>
+<Route path="/Page14"
+element={<Page14/>}></Route>
+</Routes>
+</Router>
+</>
+);
+}
+export default App; page11.js ========
+
+import React from "react";
+import { Link } from "react-router-dom";
+function Page11(){
+return(
+<div>
+I am in Page11 
+<Link to="/Page14">Go to Page2</Link>
+</div>
+)
+}
+export default Page11; 
+
+page14.js ================
+import React from "react";
+import { Link } from "react-router-dom";
+function Page14(){
+return(
+<div>
+I am in Page14
+<Link to="/">Go to Page11</Link>
+</div>
+)
+}
+export default Page14; ==================================================================================
+20. Demonstrate Nodejs Piping Streams. Code:
+==================================================================================
+const fs = require('fs');
+const readStream = fs.createReadStream('input.txt'); const writeStream = fs.createWriteStream('output.txt'); readStream.pipe(writeStream);
+console.log('Data is being piped from input.txt to output.txt.');
+ 
+==================================================================================
+Q21. Design / Create static website include Tables, List, Forms, alert messages. Code: Refer Q1, Q2 and Q4
+==================================================================================
+
+
+Q22. Write a program to apply CSS using react (Inline , External , Internal) Code:
+ 
+
+Q23. Write a program to display factorial of number in REPL. Code:
+
+==================================================================================
+PROPS AND STATE
+==================================================================================
+
+
+import React from 'react';
+import { useState } from 'react';
+
+function Head(props){
+    const [text,settext] = useState("Enter text here")
+    const handleOnchange = (event)=>{
+        console.log("change");
+        settext(event.target.value)
+    }
+    const buttonClick = ()=>{
+        console.log('click')
+        settext(text.toUpperCase())
+    }
+    return <div>
+        Head component {props.desc}
+        <input type='text' value={text} onChange={handleOnchange}></input>
+        <button  onClick={buttonClick}>uppercase</button>
+    </div>
+}
+export default Head;
+
